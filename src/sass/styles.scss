@@ -1,0 +1,105 @@
+@import "normalize";
+
+body{
+	font-family: Roboto, sans-serif;
+}
+
+.header{
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	.logo{
+		width: 360px;
+	}
+}
+
+.main{
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+	.categories{
+		width: 200px;
+		border: 1px solid #000;
+		border-radius: 10px;
+		margin-right: 50px;
+		.aside{
+			width: 200px;
+			min-height: 150px;
+			text-align: center;
+			.list{
+				margin: 0;
+				padding: 0;
+				height: 395px;
+				overflow: hidden;
+				>li{
+					list-style-type: none;
+					font-size: 30px;
+					color: #e62e00;
+					cursor: pointer;
+					margin-bottom: 5px;
+					span{
+						&:hover{
+							color: #000;
+							border-bottom: 2px solid #000;
+						}
+					}
+					&:last-child{
+						margin-bottom: 20px;
+					}
+				}
+			}
+			&_button{
+				display: inline-block;
+				border: none;
+				cursor: pointer;
+				background-color: #fff;
+				color: #e62e00;
+				margin-bottom: 20px;
+				font-size: 20px;
+				outline: none;
+				&::after{
+					content: '\27A4';
+					vertical-align: middle;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+
+	.content{
+		width: 400px;
+		display: flex;
+		flex-direction: column;
+		&_container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 25px;
+			margin: 20px;
+			height: 200px;
+		}
+		.images{
+			width: 100%;
+			height: 50px;
+			background-image: url(../../images/chuck_dancing.gif);
+			background-repeat: repeat-x;
+		}
+		&_button{
+			align-self: center;
+			width: 120px;
+			height: 40px;
+			background-color: #fff;
+			border: 1px solid #e62e00;
+			color: #e62e00;
+			font-size: 15px;
+			border-radius: 7px;
+			margin-top: 30px;
+			font-weight: 700;
+			cursor: pointer;
+			outline: none;
+		}
+	}
+}
+
+@import "media";
